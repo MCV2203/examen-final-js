@@ -350,7 +350,20 @@
 
       /* EJ 8 */
 
-      
+      const seccionCarta = document.querySelector("#seccionCarta");
+      const seccionMenu = document.querySelector("#seccionMenu");
+
+      function comprobarDiaYMostrarSeccion() {
+        if (diaSeleccionado == "sabado" || diaSeleccionado == "domingo") {
+          seccionCarta.classList.remove("oculto");
+          seccionMenu.classList.add("oculto");
+        } else {
+          seccionCarta.classList.add("oculto");
+          seccionMenu.classList.remove("oculto");
+        }
+      }
+
+      comprobarDiaYMostrarSeccion();
 
       /*
         Array donde se guardan los platos que el usuario añade.
